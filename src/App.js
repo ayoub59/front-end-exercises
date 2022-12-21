@@ -1,11 +1,12 @@
 import './App.css';
 import Buttons from './Buttons';
+import DemoApi from './components/DemoApi';
 
 function App() {
   return (
     <div className="App">
-
-      <Buttons />
+      {/* <Buttons /> */}
+      <DemoApi />
 
     </div>
   );
