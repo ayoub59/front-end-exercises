@@ -1,12 +1,31 @@
 import './App.css';
 import Buttons from './Buttons';
-import DemoApi from './components/DemoApi';
+import Maps from './components/Maps';
+import UsersApi from './components/UsersApi';
+import About from './components/About';
+import Blog from './components/Blog';
+import Home from './components/Home';
+import { Link, Routes, Route } from 'react-router-dom';
+
 
 function App() {
   return (
     <div className="App">
       {/* <Buttons /> */}
-      <DemoApi />
+      {/* <UsersApi /> */}
+      {/* <Maps /> */}
+      {/* for the routing exercise */}
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/blog">Blog</Link></li>
+        <Routes>
+          <Route path='/' element={<Home />}></Route>
+          <Route path='/about' element={<About />}></Route>
+          <Route path='/blog' element={<Blog />}></Route>
+        </Routes>
+
+      </ul>
 
     </div>
   );
